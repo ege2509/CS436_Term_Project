@@ -1,3 +1,7 @@
+CS 436 Project
+Group #7 Ege Kurtuluş
+
+
 # Ticket Booking System - Full Stack
 
 This is a full-stack web application for booking movie tickets, built with an Angular frontend and a Node.js/Express backend connected to a MySQL database.
