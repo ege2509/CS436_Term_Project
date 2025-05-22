@@ -25,7 +25,7 @@ app.use((err: any, req: express.Request, res: express.Response, next: express.Ne
     res.status(500).json({ error: 'Internal Server Error' });
 });
 
-const PORT = process.env.PORT || 3001; // Changed port to 3001 to avoid conflict with React default
-app.listen(PORT, () => {
+const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3001; // Changed port to 3001 to avoid conflict with React default
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`Backend server is running on port ${PORT}`);
 });

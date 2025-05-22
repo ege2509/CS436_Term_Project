@@ -129,13 +129,13 @@ export const getBookingById = async (req: Request, res: Response, next: NextFunc
         delete booking.seats_json; // Remove the original JSON string field from the response
 
         // --- Alternative: If using booking_seats table ---
-        /*
+        
         const [seatRows]: any = await pool.query(
             'SELECT seat_number FROM booking_seats WHERE booking_id = ?',
             [bookingId]
         );
         booking.seats = seatRows.map((row: any) => row.seat_number);
-        */
+        
         // --- End Alternative ---
 
         res.json(booking);

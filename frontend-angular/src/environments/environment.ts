@@ -6,5 +6,5 @@
 export const environment = {
   production: false,
   // Use the port your backend is running on (e.g., 3001)
-  apiUrl: 'http://localhost:3001/api'
+  apiUrl: 'http://34.118.27.97:3001/api'
 };

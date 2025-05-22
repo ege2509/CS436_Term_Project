@@ -1,11 +1,10 @@
 import mysql from 'mysql2/promise';
 
-// !! IMPORTANT: Replace with your actual MySQL credentials !!
 const pool = mysql.createPool({
-    host: 'localhost',          // Your MySQL host (often 'localhost')
-    user: 'root',    // Your MySQL username
-    password: ' ur passkey bae', // Your MySQL password
-    database: 'moviee', // The name of the database you created
+    host: process.env.DB_HOST || 'localhost',
+    user: process.env.DB_USER || 'root',
+    password: process.env.DB_PASSWORD || '',
+    database: process.env.DB_NAME || 'movie_booking_db',
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0
